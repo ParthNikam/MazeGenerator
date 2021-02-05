@@ -1,0 +1,52 @@
+* {margin: 0;}
+html, body {background-color: black; height: 100%;}
+#maze {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  background-color: lightgrey;
+}
+#new-game-menu {
+  position: absolute;
+  visibility: visible;
+  background-color: blue;
+  z-index: -1;
+  width: 80%;
+  left: auto;
+  height: auto;
+  top: auto;
+  padding: 5%;
+  color: lightgrey;
+  -moz-box-shadow: 0 0 50px black;
+  -webkit-box-shadow: 0 0 0px black;
+  box-shadow: 0 0 20px black;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 30px;
+  opacity: 0;
+}
+
+input.chbox {
+  width: 30px;
+  height: 30px;
+}
+
+.header {
+  background-color: black; 
+  position: fixed;
+  top: 100px;
+  right: 200px;
+  padding-top: 100px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 7px;
+  background-color: lightgrey;
+}
+.header a {
+  margin-top: 0px;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-decoration: none;
+}
