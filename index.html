@@ -3,72 +3,20 @@
 <head>
   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
   <meta charset="utf-8">
-  <title>Maze Generator</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-  <style>
-      * {margin: 0;}
-      html, body {background-color: black; height: 100%;}
-      #maze {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 50px;
-        height: 50px;
-        background-color: lightgrey;
-      }
-      #new-game-menu {
-        position: absolute;
-        visibility: visible;
-        background-color: blue;
-        z-index: -1;
-        width: 80%;
-        left: auto;
-        height: auto;
-        top: auto;
-        padding: 5%;
-        color: lightgrey;
-        -moz-box-shadow: 0 0 50px black;
-        -webkit-box-shadow: 0 0 0px black;
-        box-shadow: 0 0 20px black;
-        border-radius: 15px;
-        text-align: center;
-        font-size: 30px;
-        opacity: 0;
-      }
-
-      input.chbox {
-        width: 30px;
-        height: 30px;
-      }
-
-      .input {
-        background-color: black; 
-        position: fixed;
-        margin-left: 100px;
-        margin-top: 100px;
-        border-color: blue;
-        border-style: solid;
-        border-width: 1px;
-        border-radius: 5px;
-      }
-
-      input {
-        margin-left: 10px;
-        margin-bottom:5px;
-      }
-      
-  </style>
+  <title>New Maze Generator</title>
+  <link rel="stylesheet" href="styles.css"></link>
 
 </head>
 <body style="background-color: black;">
-    
-  <button class="input btn btn-primary"; id="new-game">New Maze</button><br><br>
-  <button class="input btn btn-primary"; id="solve-maze">Solve Maze</button><br><br>
-  <button class="input btn btn-primary"; onclick="remove_dead_ends(1);">RemoveDeadEnds</button>
 
   <canvas id="maze"></canvas>
+
+  <div class="buttons">
+  <button class="button"; style="top: 10px;" id="new-game">New Maze</button><br>
+  <button class="button"; style="top: 70px;" id="solve-maze">Solve Maze</button><br>
+  <button class="button"; style="top: 130px;" onclick="remove_dead_ends(1);">Remove Dead Ends</button>
+</div>
+
   
   <div id="new-game-menu">
     <h1 style="margin-top: 0px;">New Maze</h1>
