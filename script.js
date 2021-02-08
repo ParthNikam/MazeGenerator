@@ -11,7 +11,7 @@ var end_maze = new Array(2);
 var animate = false;
 var animation, animation_on, animation_interval;
 var total_animation_time = 1;
-var custom_resolution = false;
+// var custom_resolution = false;
 var show_start_end = true;
 var thin_maze = false;
 var visited, correct_path;
@@ -34,8 +34,8 @@ $(document).ready(function() {
 function resize_maze() {
   var rec_block_width;
   rec_block_width = docwidth / dimensions[0] < docheight / dimensions[1] ? (docwidth / dimensions[0]):(docheight / dimensions[1]);
-  if (!custom_resolution)
-    block_width = (docwidth / dimensions[0] < docheight / dimensions[1] ? (docwidth / dimensions[0] | 0):(docheight / dimensions[1] | 0));
+//   if (!custom_resolution)
+//     block_width = (docwidth / dimensions[0] < docheight / dimensions[1] ? (docwidth / dimensions[0] | 0):(docheight / dimensions[1] | 0));
   mazewidth = block_width * dimensions[0];
   mazeheight = block_width * dimensions[1];
   var recwidth = rec_block_width * dimensions[0];
@@ -684,8 +684,8 @@ $('#form-new-game').submit(function() {
   animate = $('input[name="animate"]').prop('checked');
   total_animation_time = 1;
   
-  custom_resolution = $('input[name="custom-resolution"]').prop('checked');
-  block_width = parseInt($('input[name="block-width"]').val());
+//   custom_resolution = $('input[name="custom-resolution"]').prop('checked');
+//   block_width = parseInt($('input[name="block-width"]').val());
   
   $('#new-game-menu').animate({opacity: 0}, "slow", function() {
     $(this).css('z-index', -1);
